@@ -1,5 +1,6 @@
 <template>
   <div class="test">safass</div>
+  <el-button @click="handleClick">点我</el-button>
 </template>
 
 <script lang="ts">
@@ -11,6 +12,11 @@ console.log(count.value);
 count.value++;
 console.log(count.value);
 export default {
+  methods: {
+    handleClick() {
+      console.log('change');
+    },
+  },
 }
 </script>
 
