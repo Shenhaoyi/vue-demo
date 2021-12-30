@@ -1,10 +1,10 @@
 <template>
-  <div class="test">safass</div>
-  <el-button @click="handleClick">点我</el-button>
+  <div class="test">{{count2}}</div>
+  <el-button @click="countPlus">点我</el-button>
 </template>
 
 <script lang="ts">
-import vue, {ref} from 'vue';
+import { ref } from 'vue';
 
 const count = ref(0);
 console.log(count);
@@ -17,6 +17,17 @@ export default {
       console.log('change');
     },
   },
+  setup(props: any) {
+    const count2 = ref(0)
+    const countPlus = () => {
+      count2.value++;
+    }
+    return {
+      count2,
+      countPlus
+    }
+  }
+
 }
 </script>
 
