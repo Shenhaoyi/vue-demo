@@ -16,6 +16,13 @@ export default {
     },
   },
   setup(props: any) {
+    // const obj = { a: 1 };
+    // const proxy = reactive(obj);
+    // const refA = toRefs(proxy).a;
+    // obj.a = 2;
+    // console.log(proxy, refA);
+    // console.log('===============');
+
     const { test } = toRefs(props);
     console.log(test);
     const count2 = ref(0);
