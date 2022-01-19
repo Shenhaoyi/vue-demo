@@ -1,7 +1,9 @@
 <template>
   <div class="test">{{ count2 }}</div>
   <el-button @click="countPlus">点我</el-button>
-  <div class="test">age from store: {{ myStore.age }}</div>
+  <el-divider></el-divider>
+  <div class="test">age from store: {{ myStore.nameAndAge }}</div>
+  <el-button @click="handleClickForStore">store test</el-button>
 </template>
 
 <script lang="ts">
@@ -13,8 +15,7 @@ export default {
     'test'
   ],
   methods: {
-    handleClick() {
-      console.log('change');
+    handleClickForStore() {
       this.myStore.ageIncrement();
     },
   },
@@ -27,7 +28,6 @@ export default {
     // console.log('===============');
 
     const myStore = useStore()
-    // let age = computed(()=>myStore.age) 还是没有响应性
 
     const { test } = toRefs(props);
     console.log(test);
@@ -43,7 +43,6 @@ export default {
       count2,
       countPlus,
       myStore,
-      // age
     }
   },
 }
