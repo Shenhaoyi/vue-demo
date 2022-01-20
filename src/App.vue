@@ -9,6 +9,10 @@ import Test from './components/Test.vue';
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
   <Test :test="1"/>
+  <el-divider></el-divider>
+  <router-link to="/">Go to Home </router-link>
+  <router-link to="/about">Go to About</router-link>
+  <router-view></router-view>
 </template>
 
 <style>
