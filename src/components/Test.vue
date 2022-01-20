@@ -1,5 +1,6 @@
 <template>
   <div class="test">{{ count2 }}</div>
+  <div class="test">{{ twiceTheCount2 }}</div>
   <el-button @click="countPlus">点我</el-button>
   <el-divider></el-divider>
   <div class="test">age from store: {{ myStore.nameAndAge }}</div>
@@ -38,9 +39,11 @@ export default {
     watch(count2, (newVal) => {
       console.log('count2 change: ', newVal);
     })
+    const twiceTheCount2 = computed(() => count2.value * 2)
     onMounted(countPlus);
     return {
       count2,
+      twiceTheCount2,
       countPlus,
       myStore,
     }
