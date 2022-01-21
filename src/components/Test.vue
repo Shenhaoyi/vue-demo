@@ -5,13 +5,17 @@
   <el-divider></el-divider>
   <div class="test">age from store: {{ myStore.nameAndAge }}</div>
   <el-button @click="handleClickForStore">store test</el-button>
+  <!-- 带递归终止条件的递归组件调用 -->
+  <test :test="test-1" v-if="test>0"></test> 
 </template>
 
 <script lang="ts">
 import { onMounted, ref, toRefs, watch, reactive, openBlock, computed } from 'vue';
 import { useStore }  from '../stores/user';
+// import Test from '../components/Test.vue'
 
 export default {
+  // name: 'Test',
   props: [
     'test'
   ],
