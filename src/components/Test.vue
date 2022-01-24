@@ -6,12 +6,16 @@
   <div class="test">age from store: {{ myStore.nameAndAge }}</div>
   <el-button @click="handleClickForStore">store test</el-button>
   <!-- 带递归终止条件的递归组件调用 -->
-  <test :test="test-1" v-if="test>0"></test> 
+  <test :test="test-1" v-if="test>0"></test>
+  <el-divider></el-divider>
+  <!-- 测试单文件组件 -->
+  <TestSingleFileComponent ref="setup" @click="handleClick"/>
 </template>
 
 <script lang="ts">
 import { onMounted, ref, toRefs, watch, reactive, openBlock, computed } from 'vue';
 import { useStore }  from '../stores/user';
+import TestSingleFileComponent from './TestSingleFileComponent.vue';
 // import Test from '../components/Test.vue'
 
 export default {
@@ -19,9 +23,16 @@ export default {
   props: [
     'test'
   ],
+  components: {
+    TestSingleFileComponent,
+  },
   methods: {
     handleClickForStore() {
       this.myStore.ageIncrement();
+    },
+    handleClick(value: any) {
+      console.log('doubleTheAge:', value);
+      console.log('value of ref:', this.$refs.setup);
     },
   },
   setup(props: any) {
