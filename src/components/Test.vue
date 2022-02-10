@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { onMounted, ref, toRefs, watch, reactive, openBlock, computed } from 'vue';
+import { onMounted, ref, toRefs, watch, reactive, openBlock, computed, onRenderTriggered } from 'vue';
 import { useStore }  from '../stores/user';
 import TestSingleFileComponent from './TestSingleFileComponent.vue';
 // import Test from '../components/Test.vue'
@@ -56,6 +56,10 @@ export default {
     })
     const twiceTheCount2 = computed(() => count2.value * 2)
     onMounted(countPlus);
+    // 通过生命周期钩子进行debugger
+    onRenderTriggered((e: any) => {
+      debugger
+    });
     return {
       count2,
       twiceTheCount2,
