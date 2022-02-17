@@ -36,8 +36,12 @@ export default {
     },
   },
   setup(props: any) {
-    // const obj = { a: 1 };
-    // const proxy = reactive(obj);
+    const obj = { a: 1 };
+    const proxy = new Proxy(obj, {});
+    const react = reactive(obj);
+    console.log(proxy, react);
+    const refObj = ref(obj);
+    console.log(refObj);
     // const refA = toRefs(proxy).a;
     // obj.a = 2;
     // console.log(proxy, refA);
