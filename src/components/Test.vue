@@ -62,7 +62,7 @@ export default {
     onMounted(countPlus);
     // 通过生命周期钩子进行debugger
     onRenderTriggered((e: any) => {
-      debugger
+      // debugger
     });
     return {
       count2,
