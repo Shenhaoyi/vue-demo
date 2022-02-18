@@ -5,7 +5,6 @@
 <script lang="ts">import { onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
-
 export default {
   setup(props: any) {
     const router = useRouter()

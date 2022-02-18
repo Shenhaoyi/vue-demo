@@ -6,7 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
 
 interface props {
     age: number;

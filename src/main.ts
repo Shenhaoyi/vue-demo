@@ -4,6 +4,7 @@ import App from './App.vue'
 import 'element-plus/dist/index.css'
 import { createPinia } from 'pinia';
 import router from './routers/routes';
+import 'vue-global-api'
 
 
 const app = createApp(App)
