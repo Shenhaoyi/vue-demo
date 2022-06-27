@@ -7,6 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^8.7.5",
     "element-plus": "^1.2.0-beta.6",
     "pinia": "^2.0.9",
     "vue": "^3.2.23",
