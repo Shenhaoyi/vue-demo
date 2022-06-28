@@ -1,5 +1,6 @@
 import * as VueRouter from 'vue-router';
 import NotFound  from '../components/NotFound.vue';
+import VueUse from '../components/vueUse/index.vue'
 
 // 1. 定义路由组件.
 const Home = { template: '<div>Home</div>' }
@@ -15,6 +16,7 @@ const routes = [
   { path: '/user-:afterUser(.*)', component: NotFound },
   { path: '/', component: Home },
   { path: '/about', component: About },
+  { path: '/vue-use', component: VueUse },
 ]
 
 

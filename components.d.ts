@@ -5,11 +5,14 @@
 declare module 'vue' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElDialog: typeof import('element-plus/es')['ElDialog']
     ElDivider: typeof import('element-plus/es')['ElDivider']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     NotFound: typeof import('./src/components/NotFound.vue')['default']
     Test: typeof import('./src/components/Test.vue')['default']
     TestSingleFileComponent: typeof import('./src/components/TestSingleFileComponent.vue')['default']
+    UseConfirmDialog: typeof import('./src/components/vueUse/use-confirm-dialog.vue')['default']
+    VueUse: typeof import('./src/components/vueUse/index.vue')['default']
   }
 }
 
