@@ -2,7 +2,7 @@
   <h2>
     <span class="text-orange-400">{{ message }}</span>
   </h2>
-  <button :disabled="revealed1 || revealed2" @click="dialog1.reveal">
+  <button :disabled="revealed1 || revealed2" @click="openDialog1">
     Click to Show Modal Dialog
   </button>
 
@@ -39,6 +39,11 @@ const revealed2 = ref(false)
 
 const dialog1 = useConfirmDialog(revealed1)
 const dialog2 = useConfirmDialog(revealed2)
+
+const openDialog1 = async () => {
+  const { data, isCanceled } = await dialog1.reveal()
+  console.log(isCanceled);
+}
 
 dialog1.onReveal(() => {
   message.value = 'Modal is shown!'
