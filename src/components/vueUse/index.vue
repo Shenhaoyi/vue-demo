@@ -1,5 +1,7 @@
 <template>
-  <UseConfirmDialog></UseConfirmDialog>
+  <UseConfirmDialog />
+  <el-divider></el-divider>
+  <UseEventBus />
 </template>
 
 <script lang="ts" setup>
