@@ -13,6 +13,7 @@ declare module 'vue' {
     TestSingleFileComponent: typeof import('./src/components/TestSingleFileComponent.vue')['default']
     UseConfirmDialog: typeof import('./src/components/vueUse/use-confirm-dialog.vue')['default']
     UseEventBus: typeof import('./src/components/vueUse/use-event-bus.vue')['default']
+    UseMyTest: typeof import('./src/components/vueUse/use-my-test.vue')['default']
     UseVModel: typeof import('./src/components/vueUse/use-v-model.vue')['default']
     VueUse: typeof import('./src/components/vueUse/index.vue')['default']
   }

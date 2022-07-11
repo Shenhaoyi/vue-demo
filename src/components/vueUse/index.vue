@@ -7,7 +7,8 @@
   <div>
     {{ formData }}
   </div>
-
+  <el-divider></el-divider>
+  <useMyTest />
 </template>
 
 <script lang="ts" setup>
