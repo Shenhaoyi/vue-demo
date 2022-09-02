@@ -1,6 +1,7 @@
 import * as VueRouter from 'vue-router';
 import NotFound  from '../components/NotFound.vue';
 import VueUse from '../components/vueUse/index.vue'
+import Exposure from '../components/exposure.vue';
 
 // 1. 定义路由组件.
 const Home = { template: '<div>Home</div>' }
@@ -17,6 +18,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/about', component: About },
   { path: '/vue-use', component: VueUse },
+  { path: '/exposure', component: Exposure },
 ]
 
 
