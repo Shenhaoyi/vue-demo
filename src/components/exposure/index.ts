@@ -13,7 +13,7 @@ export class ExposureObserver {
     this.neverExposedCallback = neverExposedCallback;
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach((item) => {
-        if (item.intersectionRatio > 0) {
+        if (String(item.intersectionRatio) === '1') {
           exposedCallback();
           this.neverExposed = false;
           this.unobserve(item.target); // 曝光一次就停止监听
