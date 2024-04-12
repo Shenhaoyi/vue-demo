@@ -32,4 +32,5 @@ export default defineConfig({
       vue: 'vue/dist/vue.esm-bundler.js', // 定义vue的别名，如果使用其他的插件，可能会用到别名
     },
   },
+  optimizeDeps: { exclude: ['vue'] }, // 调试源码时不要将 vue 预构建
 });
