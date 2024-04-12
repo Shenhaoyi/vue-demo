@@ -8,12 +8,13 @@ import Test from './components/Test.vue';
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-  <!-- <Test :test="0" /> -->
+  <Test :test="0" />
   <el-divider></el-divider>
   <router-link to="/">Go to Home | </router-link>
   <router-link to="/about">Go to About | </router-link>
   <router-link to="/vue-use">Go to Vue Use</router-link>
   <router-link to="/exposure">Go to exposure</router-link>
+  <router-link to="/test-next-tick">Go to next-tick</router-link>
   <router-view></router-view>
 </template>
 

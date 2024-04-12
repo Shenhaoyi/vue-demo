@@ -16,6 +16,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Test: typeof import('./src/components/Test.vue')['default']
+    TestNextTick: typeof import('./src/components/TestNextTick.vue')['default']
     TestSingleFileComponent: typeof import('./src/components/TestSingleFileComponent.vue')['default']
     UseConfirmDialog: typeof import('./src/components/vueUse/use-confirm-dialog.vue')['default']
     UseEventBus: typeof import('./src/components/vueUse/use-event-bus.vue')['default']

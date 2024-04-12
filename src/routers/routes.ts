@@ -2,10 +2,11 @@ import * as VueRouter from 'vue-router';
 import NotFound  from '../components/NotFound.vue';
 import VueUse from '../components/vueUse/index.vue'
 import Exposure from '../components/exposure.vue';
+import TestNextTick from '../components/TestNextTick.vue';
 
 // 1. 定义路由组件.
-const Home = { template: '<div>Home</div>' }
-const About = { template: '<div>About</div>' }
+const Home = { template: '<div>Home</div>' };
+const About = { template: '<div>About</div>' };
 
 // 2. 定义一些路由
 const routes = [
@@ -19,7 +20,8 @@ const routes = [
   { path: '/about', component: About },
   { path: '/vue-use', component: VueUse },
   { path: '/exposure', component: Exposure },
-]
+  { path: '/test-next-tick', component: TestNextTick },
+];
 
 
 // 3. 创建路由实例
